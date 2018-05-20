@@ -1106,120 +1106,156 @@ detailid</ColNames>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="273" parent="238" name="PRIMARY">
+    <index id="273" parent="238" name="shelfid">
+      <ColNames>shelfid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="274" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="274" parent="239" name="shelterid">
+    <foreign-key id="275" parent="238" name="production_ibfk_1">
+      <ColNames>shelfid</ColNames>
+      <RefSchemaName>dblab3</RefSchemaName>
+      <RefTableName>shelter</RefTableName>
+      <RefColNames>shelterid</RefColNames>
+    </foreign-key>
+    <column id="276" parent="239" name="shelterid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="239" name="area">
+    <column id="277" parent="239" name="area">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="239" name="sheltertype">
+    <column id="278" parent="239" name="sheltertype">
       <Position>3</Position>
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="277" parent="239" name="PRIMARY">
+    <key id="279" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>shelterid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="278" parent="240" name="storeid">
+    <column id="280" parent="240" name="storeid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="240" name="storename">
+    <column id="281" parent="240" name="storename">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="280" parent="240" name="storeaddress">
+    <column id="282" parent="240" name="storeaddress">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="281" parent="240" name="PRIMARY">
+    <key id="283" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>storeid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="282" parent="241" name="supid">
+    <column id="284" parent="241" name="supid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="241" name="supname">
+    <column id="285" parent="241" name="supname">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="241" name="supcontact">
+    <column id="286" parent="241" name="supcontact">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="285" parent="241" name="PRIMARY">
+    <key id="287" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>supid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="286" parent="242" name="pid">
+    <column id="288" parent="242" name="pid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="242" name="supid">
+    <column id="289" parent="242" name="supid">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="288" parent="242" name="PRIMARY">
+    <index id="290" parent="242" name="supid">
+      <ColNames>supid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="291" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>pid
 supid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="289" parent="243" name="truckid">
+    <foreign-key id="292" parent="242" name="supply_ibfk_1">
+      <ColNames>pid</ColNames>
+      <RefSchemaName>dblab3</RefSchemaName>
+      <RefTableName>production</RefTableName>
+      <RefColNames>pid</RefColNames>
+    </foreign-key>
+    <foreign-key id="293" parent="242" name="supply_ibfk_2">
+      <ColNames>supid</ColNames>
+      <RefSchemaName>dblab3</RefSchemaName>
+      <RefTableName>supplier</RefTableName>
+      <RefColNames>supid</RefColNames>
+    </foreign-key>
+    <column id="294" parent="243" name="truckid">
       <Position>1</Position>
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="243" name="cartype">
+    <column id="295" parent="243" name="cartype">
       <Position>2</Position>
       <DataType>varchar(10)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="243" name="eid">
+    <column id="296" parent="243" name="eid">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="292" parent="243" name="PRIMARY">
+    <index id="297" parent="243" name="eid">
+      <ColNames>eid</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="298" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>truckid</ColNames>
       <Primary>1</Primary>
     </key>
+    <foreign-key id="299" parent="243" name="truck_ibfk_1">
+      <ColNames>eid</ColNames>
+      <RefSchemaName>dblab3</RefSchemaName>
+      <RefTableName>employee</RefTableName>
+      <RefColNames>eid</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

@@ -573,9 +573,9 @@ function onEditClick(e) {
             data: param,
             success: function (response) {
                 if (response === "success") {
-                    Notification.success("Edit succeeded!");
+                    Notification.success("修改已保存！");
                     Tables.get(NavTabs.currentTab());
-                } else alert(response);
+                } else Notification.error("修改失败！");
             }
         });
 
@@ -608,10 +608,10 @@ function onDeleteClick(e) {
             method: "GET",
             success: function (response) {
                 if (response === "success") {
-                    Notification.success("Delete succeeded!");
+                    Notification.success("删除成功！");
                     Tables.get(NavTabs.currentTab());
                 }
-                else alert(response);
+                else Notification.error("删除失败！")
             }
         })
     }
@@ -634,10 +634,10 @@ function submitInsert() {
         method: "GET",
         success: function (response) {
             if (response === "success") {
-                Notification.success("Add succeeded!");
+                Notification.success("添加成功!");
                 Tables.get(NavTabs.currentTab());
             }
-            else alert(response);
+            else Notification.error("插入失败，请核查各字段！");
         }
     })
 }

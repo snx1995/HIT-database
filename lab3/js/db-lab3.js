@@ -1,6 +1,6 @@
 var Lab3 = (function () {
 
-    var pages = ["pages/main.html", "pages/manage.html", "pages/er.html", "pages/query.html", "pages/about.html"];
+    var pages = ["pages/main.html", "pages/manage.html", "pages/query.html", "pages/er.html", "pages/about.html"];
 
     var $navOptions;
     var $frame;

@@ -1,0 +1,23 @@
+.search-content {
+    margin: 50px auto;
+    padding: 50px;
+    width: 1000px;
+    height: 200px;
+}
+#search {
+    width: 100%;
+    height: 50px;
+}
+label[for='search'] {
+    font-size: 22px;
+    font-weight: bold;
+}
+#result-pane {
+    margin: 0 auto;
+    width: 1000px;
+    height: auto;
+}
+.search-group tr{
+    display: block;
+    margin-top: 20px;
+}

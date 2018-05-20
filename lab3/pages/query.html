@@ -4,23 +4,57 @@
     <meta charset="UTF-8">
     <title>查询</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="/css/query.css">
 </head>
 <body>
-<ul class="nav nav-pills">
-    <li class="active"><a href="#page1" data-toggle="tab">1</a></li>
-    <li><a href="#page2" data-toggle="tab">2</a></li>
-</ul>
-<div class="tab-content">
-    <div id="page1" class="tab-pane active">
-        <h1>page1</h1>
+<div style="width: 25%;height: auto;float: left;margin: 50px;">
+    <table class="search-group">
+        <tr>
+            <td><input type="text" class="form-control" id="employee-search" placeholder="职工姓名，职工号"></td>
+            <td><button class="btn btn-primary" data-search="employee-search">Go</button></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control" id="production-search" placeholder="商品"></td>
+            <td><button class="btn btn-primary" data-search="production-search">Go</button></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control" id="supply-search" placeholder="供应商"></td>
+            <td><button class="btn btn-primary" data-search="supply-search">Go</button></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control" id="shelter-search" placeholder="商品存放区域"></td>
+            <td><button class="btn btn-primary" data-search="shelter-search">Go</button></td>
+        </tr>
+    </table>
+</div>
+<div style="width: 65%;height: auto;float: left;">
+    <div class="search-content">
+        <table width="100%">
+            <tr>
+                <td colspan="2"><label for="search">SQL查询</label></td>
+            </tr>
+            <tr>
+                <td><input id="search" style="display: inline" type="text" class="form-control search"></td>
+                <td><button class="btn btn-primary btn-lg" id="go-btn">GO</button></td>
+            </tr>
+        </table>
     </div>
 
-    <div id="page2" class="tab-pane">
-        <h1>page2</h1>
+    <div id="result-pane">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="result-table">
+
+        </table>
     </div>
 </div>
-
 <script src="/js/jquery-3.3.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="/js/query.js"></script>
+<script>
+    $(document).ready(function () {
+        Query.init();
+    });
+</script>
 </body>
 </html>
