@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpRuntimeConfiguration">
+    <extensions>
+      <extension name="SQLite" enabled="false" />
+      <extension name="SplType" enabled="false" />
+      <extension name="apc" enabled="false" />
+      <extension name="apcu" enabled="false" />
+      <extension name="cubrid" enabled="false" />
+      <extension name="gearman" enabled="false" />
+      <extension name="geoip" enabled="false" />
+      <extension name="gmagick" enabled="false" />
+      <extension name="http" enabled="false" />
+      <extension name="ibm_db2" enabled="false" />
+      <extension name="imagick" enabled="false" />
+      <extension name="inotify" enabled="false" />
+      <extension name="libevent" enabled="false" />
+      <extension name="mailparse" enabled="false" />
+      <extension name="memcache" enabled="false" />
+      <extension name="memcached" enabled="false" />
+      <extension name="ming" enabled="false" />
+      <extension name="mongo" enabled="false" />
+      <extension name="mongodb" enabled="false" />
+      <extension name="ncurses" enabled="false" />
+      <extension name="oauth" enabled="false" />
+      <extension name="pthreads" enabled="false" />
+      <extension name="sqlsrv" enabled="false" />
+      <extension name="ssh2" enabled="false" />
+      <extension name="svn" enabled="false" />
+      <extension name="wincache" enabled="false" />
+      <extension name="xhprof" enabled="false" />
+      <extension name="yaml" enabled="false" />
+    </extensions>
+  </component>
+</project>

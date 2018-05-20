@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/DataTables/DataTables-1.10.16/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="/css/manage.css">
+</head>
+<body>
+<div class="insert-pane" id="insert-pane">
+    <form>
+        <table style="margin: 0 auto">
+            <tr id="insert-row">
+
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div id="notification">
+    <h5>Test</h5>
+</div>
+
+<div class="side-tabs">
+    <div class="my-tab active" data-target="#employee">职工</div>
+    <div class="my-tab" data-target="#supplier">供货商</div>
+    <div class="my-tab" data-target="#production">商品</div>
+    <div class="my-tab" data-target="#shelter">货架</div>
+    <div class="my-tab" data-target="#bill">账单</div>
+    <div class="my-tab" data-target="#bill-detail">账单明细</div>
+    <div class="my-tab" data-target="#store">库房</div>
+    <div class="my-tab" data-target="#truck">配货车</div>
+    <div class="my-tab" data-target="#supply">商品供应关系</div>
+</div>
+
+<div class="my-tab-content">
+    <div id="employee" class="tabs active">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="employee-table">
+            <thead>
+            <tr>
+                <th>职工号</th>
+                <th>姓名</th>
+                <th>生日</th>
+                <th>入职时间</th>
+                <th>联系方式</th>
+                <th>家庭地址</th>
+                <th>职位</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="supplier" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="supplier-table">
+            <thead>
+            <tr>
+                <th>供货商编号</th>
+                <th>名称</th>
+                <th>联系方式</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="production" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="production-table">
+            <thead>
+            <tr>
+                <th>商品号</th>
+                <th>商品名称</th>
+                <th>货架号</th>
+                <th>进价</th>
+                <th>售价</th>
+                <th>生产日期</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="shelter" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="shelter-table">
+            <thead>
+            <tr>
+                <th>货架号</th>
+                <th>区域编号</th>
+                <th>型号</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="bill" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="bill-table">
+            <thead>
+            <tr>
+                <th>账单号</th>
+                <th>数额</th>
+                <th>日期</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="bill-detail" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="bill-detail-table">
+            <thead>
+            <tr>
+                <th>账单号</th>
+                <th>明细号</th>
+                <th>事项</th>
+                <th>数量</th>
+                <th>金额</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="truck" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="truck-table">
+            <thead>
+            <tr>
+                <th>车牌号</th>
+                <th>车型</th>
+                <th>驾驶员</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="store" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="store-table">
+            <thead>
+            <tr>
+                <th>库房号</th>
+                <th>库房名称</th>
+                <th>库房地址</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div id="supply" class="tabs">
+        <table width="100%" class="table table-bordered table-striped table-hover" id="supply-table">
+            <thead>
+            <tr>
+                <th>商品编号</th>
+                <th>供货商编号</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/DataTables/DataTables-1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="/js/manage.js"></script>
+<script src="/js/notification.js"></script>
+<script>
+    $(document).ready(function () {
+        Insert.init();
+        Tables.init();
+        NavTabs.init();
+        Notification.init();
+    });
+</script>
+</body>
+</html>
